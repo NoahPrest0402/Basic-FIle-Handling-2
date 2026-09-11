@@ -7,9 +7,9 @@ async function loadJSON() {
         const jsonData = await fs.readFile(filePath, 'utf8');
         const data = JSON.parse(jsonData);
         
-        for (let i = 0; i < 4; i++){
+        for (let i = 0; i < data.orders.length; i++){
             console.log("Name:", data. orders[i].name);
-            for (let num = 0; num < 4; num++){
+            for (let num = 0; num < data.products.length; num++){
                 console.log(data.products[num].item, "x", data.orders[i].qty[num]); 
             }
             console.log("-----------------------")
